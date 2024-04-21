@@ -94,8 +94,14 @@ window.onload=function() {
       var randomNumber = Math.floor(Math.random() * paipuLength);
       var page = paipu[randomNumber];
       //在注释框中显示注释
-      name = names[page];
-      document.getElementById('zhushi').textContent="宣和牌谱第"+(page+1)+"页，名字是"+name;
+      var name = explanations[page].name;
+      var points = explanations[page].points;
+      var explanation = "你抽到了《宣和牌谱》第"+(page+1)+"页，名字是："+name+"。<br/>";
+      explanation += "第一牌的叫法有：" +single_card_name[points[0]]+"等；<br/>";
+      explanation += "第二牌的叫法有：" +single_card_name[points[1]]+"等；<br/>";
+      explanation += "第三牌的叫法有：" +single_card_name[points[2]]+"等。<br/>";
+
+      document.getElementById('zhushi').innerHTML = explanation;
       // 在图片框中显示图片
       var img = document.createElement("img");
 
