@@ -1,3 +1,4 @@
+// 牌谱第几页
 var paipu = [
 16,
 17,
@@ -70,6 +71,7 @@ var paipu = [
 //84,
 85
 ];
+// 牌谱解释
 var explanations ={
 16 : {name : "七星刃",points:[11,12,11]},
 17 : {name : "三纲五常",points:[11,13,11]},
@@ -142,7 +144,7 @@ var explanations ={
 //84 : {name : "名字",points:[00,00,00]},
 85 : {name : "桃园三结义",points:[11,14,44]}
 };
-
+// 单张牌的名字
 var single_card_name = {
 66:"天牌、六六、长六、重六、大六",
 11:"地牌、幺幺、长幺、重幺、大幺",
